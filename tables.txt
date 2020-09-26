@@ -1,0 +1,32 @@
+Tables:
+---------
+student
+----------
+rno number (primary key)
+sname varchar2(20)
+course varchar2(20)
+
+
+fee:
+----
+rno number (foreign key)
+totalfee number
+feepaid number
+
+userinfo
+----------
+uname  varchar(20) primary key
+pwd varchar(20)
+
+queries:
+----------
+create table student (rno number primary key, sname varchar2(20), course varchar2(20))
+
+create table fee (rno number references student (rno), totalfee number, feepaid number)
+
+create table userinfo(uname varchar2(20) primary key,pwd varchar2(20));
+
+
+
+
+
